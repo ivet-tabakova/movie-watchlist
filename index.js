@@ -18,7 +18,7 @@ search.addEventListener('keypress',e => {
 
         movieComponents.innerHTML = "";
         const movieTitles = [];
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=77dc1194&s=${search.value}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=77dc1194&s=${search.value}`)
         .then(res => res.json())
         .then(data => {
             if(data.Response !== 'False') {
@@ -34,7 +34,7 @@ search.addEventListener('keypress',e => {
 
          //loop through Titles array and fetch individual movie titles
          for(var i = 0; i < movieTitles.length; i++) {
-            fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=77dc1194&t=${movieTitles[i]}`)
+            fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=77dc1194&t=${movieTitles[i]}`)
             .then(res => res.json())
             .then(data => {
                 const movieData = {
